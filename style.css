@@ -1,0 +1,1135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: var(--bg-color);
+  }
+  html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+  }
+:root{
+    --bg-color:rgba(220, 209, 209, 0.729);
+    --main-color:rgb(234, 67, 67);
+    --text-color:black;
+
+    
+}
+.dark-theme{
+    --bg-color:black;
+    --main-color:rgb(234, 67, 67);
+    --text-color:rgba(220, 209, 209, 0.729);
+}
+body{
+    background-color:var(--bg-color);
+    height: auto;
+}
+
+/* header */
+header{
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    z-index: 10;
+
+}
+nav{
+    width: 100%;
+    height: 90px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+}
+.logo i{
+    margin-right: 10px;
+    font-size: 40px;
+}
+nav .logo{
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: bold;
+}
+.navBar{
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+    
+}
+#icon{
+    width: 30px;
+    cursor: pointer;
+    padding: 10px 0px;
+    transition: 0.5s;
+}
+#icon:hover{
+    transform: scale(1.3);
+}
+
+.navBar li a{
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+.navBar li{
+    position: relative;
+}
+.navBar li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+    transition: 0.5s;
+
+}
+.navBar a:hover::after{
+    width: 100%;
+}
+.btn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    /* background-color: aqua; */
+}
+.toggle .show , .toggle .remove{
+    font-size: 25px;
+    color: var(--text-color);
+    border-radius: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+nav button{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    transition: 0.5s;
+}
+nav button:hover{
+    transform: scale(1.1);
+    background-color: rgb(243, 40, 40);
+}
+/* home */
+.home{
+    margin-bottom: 50px;
+    width: 100%;
+}
+.home-container{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-text{
+    padding: 50px 120px;
+    flex: 1;
+    color: var(--text-color);
+}
+.home-text h4{
+    font-size: 20px;
+}
+.home-text h2{
+    font-size: 70px;
+}
+.home-text p{
+    margin-bottom: 20px;
+}
+.home-text button{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    transition: 0.5s;
+}
+.home-text .click{
+    display: flex;
+    align-items: center;
+}
+.home-text button:hover{
+    transform: scale(1.1);
+    background-color: rgb(243, 40, 40);
+}
+.home-img{
+    flex: 1;
+    margin-right: 100px;
+}
+.home-img img{
+    width: 100%;
+    height: 100%;
+}
+.play{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.play i{
+    background-color: var(--main-color);
+    padding: 5px;
+    font-size: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.play i:hover{
+    transform: scale(1.1);
+    background-color: rgb(243, 40, 40);
+}
+
+/* category */
+
+.category{
+    /* width: 100%; */
+    text-align: center;
+}
+.category h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.category h2{
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+.category-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 0px;
+}
+.category-content{
+    padding: 30px 0px;
+    margin: 10px 50px;
+    transition: 0.5s;
+    border-radius: 20px;
+    color: var(--text-color);
+    
+}
+.category-content:hover{
+    border: none;
+    box-shadow: 0 15px 20px -1px rgba(0, 0, 0, 0.06);
+}
+.category-content i{
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+.category-text{
+    padding: 0px 60px;
+    text-align: center;
+}
+.category-text h4{
+    margin-bottom: 15px;
+}
+/* Top selling */
+.selling-box{
+    /* width: 100%; */
+    text-align: center;
+}
+.selling-box h2{
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+.selling-box h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.card-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card{
+    width: 350px;
+    height: 400px;
+    box-shadow: 0px 10px 5px  rgba(0, 0, 0, 0.06);
+    border-radius: 20px ;
+    overflow: hidden;
+}
+.card:hover{
+    box-shadow: 0 15px 20px -1px rgba(0, 0, 0, 0.06);
+}
+.card-img{
+    width: 100%;
+    height: 320px;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-text{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0px 20px;
+    margin-bottom: 7px;
+    color: var(--text-color);
+}
+.card-text h4,.card span{
+    color: var(--text-color);
+}
+span i{
+    margin-right: 10px;
+}
+/* booking */
+.booking-box{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+.booking-text h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.booking-text h2{
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+.booking-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.booking-content i{
+    margin-right: 20px;
+    font-size: 30px;
+    background-color: yellow;
+    padding: 12px 10px;
+    border-radius: 20px;
+    color: var(--text-color);
+}
+.booking-content .aa{
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    background-color: orangered;
+}
+.booking-content .bb{
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    background-color: steelblue;
+}
+.booking-content div{
+    width: 450px;
+    color: var(--text-color);
+}
+.one{
+    opacity: 0.7;
+}
+.booking-card{
+    margin-right: 150px;
+    margin-top: 150px;
+    box-shadow: 10px 10px 10px   rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.booking-card img{
+    width: 100%;
+    height: 100%;
+}
+/* about */
+
+.about{
+    /* background-color: aqua; */
+    /* width: 100%; */
+    padding:  70px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-text{
+    flex: 1;
+}
+.about h4{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.about h2{
+    font-size: 50px;
+     margin-bottom: 50px;
+     color: var(--text-color);
+}
+.about-box{
+    box-shadow: 0 15px 20px -1px rgba(0, 0, 0, 0.06);
+    padding: 40px 50px;
+    flex: 1;
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+}
+.about-box img{
+    position: absolute;
+    left: -20px;
+    top: -25px;
+}
+.about-box {
+    position: relative;
+}
+.about-box div h4{
+    margin-top: 40px;
+    color: var(--text-color);
+}
+.about-box div p{
+    opacity: 0.7;
+    color: var(--text-color);
+}
+.about i{
+    font-size: 40px;
+    opacity: 0.7;
+}
+.about .arrow{
+    display: flex;
+    flex-direction: column;
+    padding: 70px 10px;
+    
+}
+ .arrow i{
+    cursor: pointer;
+    margin: 40px 0px;
+    color: var(--main-color);
+ } 
+ /* brand */
+ .brand{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+ }
+ .brand div{
+    padding: 30px 40px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.5s;
+ }
+ .brand div img{
+    filter: contrast(10%);
+    transition: 0.5s;
+ }
+ .brand div:hover{
+    box-shadow: 0 15px 20px -1px rgba(0, 0, 0, 0.06);
+    
+ }
+.brand div img:hover{
+    filter: contrast(100%);
+}
+/* contact */
+.contact{
+    /* width: 100%; */
+    height: 500px;
+    padding: 50px;
+    position: relative;
+    
+}
+.contact .send{
+    font-size: 30px;
+    background-color: var(--main-color);
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    right: 30px;
+    top:20px;
+    transition: 0.5s;
+    color: var(--text-color);
+}
+.contact .send:hover{
+    transform: scale(1.1);
+    background-color: rgb(243, 40, 40);
+}
+.contact-box{
+    width: 100%;
+    height: 100%;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 40px;
+    text-align: center; 
+}
+.contact-box h2{
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0.7;
+    padding-top: 80px;
+    margin-bottom: 50px;
+}
+.contact-box div{
+    display: inline;
+    position: relative;
+}
+.contact-box div img{
+    position: absolute;
+    left: 15px;
+    top: 3px;
+
+}
+.contact-box input{
+    border: none;
+    outline: none;
+    width: 500px;
+    padding: 12px 50px;
+    border-radius: 10px;
+}
+.contact-box button{
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    border: none;
+    transition: 0.5s;
+    color: var(--text-color);
+}
+.contact-box button:hover{
+    transform: scale(1.1);
+    background-color: rgb(243, 40, 40);
+}
+/* footer */
+
+.footer{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: top;
+    padding: 50px 10px;
+}
+.footer div .logo{
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+.footer div p{
+    font-size: 15px;
+    opacity: 0.7;
+    color: var(--text-color);
+}
+.footer .menu a{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.menu .mt{
+    margin-top: 30px;
+}
+.menu p{
+    margin-bottom: 7px;
+}
+.icon-box .social {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+.social i{
+    color: var(--text-color);
+}
+.social div{
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.social .face{
+    padding: 5px 12px;
+}
+.icon-box h2{
+    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--text-color);
+}
+/* bottom */
+.bottom{
+    text-align: center;
+}
+.bottom p{
+    font-size: 12px;
+    opacity: 0.7;
+    color: var(--text-color);
+
+}
+
+/* media */
+
+@media (max-width: 1281px) {
+    /* header */
+    header{
+        width: 100%;
+        
+    }
+    nav{
+        width: 100%;
+        padding: 0px 50px;
+    }
+    .navBar {
+        column-gap: 1.5rem;
+    }
+    .navBar .btn{
+        justify-content: space-around;
+    }
+    /* home */
+
+    .home{
+        width: 100%;
+    }
+    .home-container{
+        width: 100%;
+    }
+    .home-text{
+        padding: 50px ;
+    }
+    .home-text h2{
+        font-size: 55px;
+    }
+    .home-img{
+        margin-right: 40px;
+    }
+    /* category */
+    .category{
+        width: 100%;
+    }
+    .category-box{
+        width: 100%;
+        /* padding: 50px 80px 50px 70px; */
+    }
+    .category h2,.category h4{
+        width: 100%;
+        text-align: center;
+    }
+    .category-content{
+        margin: 0;
+    }
+    .category-text{
+        padding: 0px 40px;
+    }
+    /* selling */
+    .selling{
+        width: 100%;
+    }
+    .selling-box{
+        width: 100%;
+    }
+    /* booking */
+    .booking{
+        width: 100%;
+    }
+    .booking-box{
+        padding: 100px 50px;
+    }
+    .booking-card{
+        height: 400px;
+        margin-top: 100px;
+    }
+    /* about */
+    .about{
+        width: 100%;
+        padding: 70px 50px;
+    }
+    /* brand */
+    .brand{
+        width: 100%;
+    }
+    /* contact */
+    .contact{
+        width: 100%;
+    }
+    /* footer */
+    .footer{
+        width: 100%;
+        padding: 50px 0px;
+    }
+    /* bottom */
+    .bottom{
+        width: 100%;
+    }
+   
+    
+   
+}
+@media (max-width: 1024px) {
+    .selling{
+        padding: 0px 30px;
+    }
+    .card{
+        width: 300px;
+    }
+    .booking-card{
+        width: 350px;
+        margin-right: 0px;
+    }
+    .contact{
+        padding-right: 60px;
+    }
+}
+@media (max-width: 912px) {
+    nav{
+        padding: 0px 15px;
+    }
+    .toggle .show{
+        display: block;
+    }
+    .navBar a{
+        display: none;
+    }
+    .home-text{
+        padding: 50px 25px;
+    }
+    .category-content{
+        padding: 30px 15px;
+    }
+    .category-text{
+        padding: 0px;
+    }
+    .category h4{
+        font-size: 17px;
+    }
+    .card{
+        margin-left: 15px;
+    }
+    .about{
+        padding: 70px 30px;
+    }
+    .about h2{
+        font-size: 40px;
+    }
+    .brand{
+        padding: 40px 15px;
+    }
+}
+@media (max-width:820px) {
+    nav .logo{
+        font-size: 25px;
+    }
+    .navBar li a{
+        font-size: 15px;
+    }
+    .home-text h4{
+        font-size: 17px;
+    }
+    .home-text h2{
+        font-size: 45px;
+    }
+    .category h4{
+        font-size: 18px;
+    }
+    .category h2{
+        font-size: 40px;
+    }
+    .category i{
+        font-size: 80px;
+    }
+    .selling-box h2{
+        font-size: 40px;
+    }
+    .selling-box h4{
+        font-size: 18px;
+    }
+    .card{
+        height: 320px;
+    }
+    .card-img{
+        height: 250px;
+    }
+    .booking-box{
+        padding-right: 20px;
+    }
+    .booking-text{
+        padding-right: 70px;
+    }
+    .booking-text h4{
+        font-size: 18px;
+    }
+    .booking-text h2{
+        font-size: 40px;
+    }
+    .booking-card{
+        margin-left: -70px;
+        height: 250px;
+        margin-top: 200px;
+    }
+    .about-text h4{
+        font-size: 18px;
+    }
+    .about-text h2{
+        font-size: 35px;
+    }
+    .about-box div p{
+        font-size: 15px;
+    }
+    .about-box {
+        padding: 30px;
+    }
+    .brand div img{
+        width: 100px;
+    }
+    .contact-box h2{
+        font-size: 20px;
+    }
+    .contact-box button{
+        font-size: 18px;
+    }
+    .footer div p{
+        font-size: 12px;
+    }
+    .footer .menu a{
+        font-size: 20px;
+    }
+    .icon-box h2{
+        font-size: 15px;
+    }
+    
+}
+@media(max-width:770px) {
+    nav{
+        padding: 0px 30px;
+    }
+    .home-text{
+        padding-left: 50px;
+    }
+    .category-box{
+        padding: 0px 10px;
+    }
+    .category-content{
+        padding: 30px 10px;
+    }
+    .category-text h4{
+        font-size: 15px;
+    }
+    .category-text p{
+        font-size: 12px;
+    }
+    .booking-box{
+        padding: 100px 30px;
+    }
+}
+@media (max-width:540px) {
+    nav{
+        height: 70px;
+    }
+    .logo i{
+        font-size: 30px;
+    }
+    .btn button{
+        font-size: 15px;
+    }
+    .home-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-text{
+        padding: 50px;
+    }
+    .click{
+        flex-direction: column;
+    }
+    .play{
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    
+    .category-box {
+        flex-direction: column;
+    }
+    .category-text h4{
+        font-size: 18px;
+    }
+    .category-text p{
+        font-size: 15px;
+    }
+    .category-content{
+        margin-bottom: 100px;
+    }
+    .card-box{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        height: 450px;
+        margin-left: 0px;
+        margin-bottom: 50px;
+    }
+    .card-img{
+        height: 360px;
+    }
+    .booking-box{
+        flex-direction: column;
+    }
+    .booking-text{
+        padding-right: 0px;
+    }
+    .booking-card{
+        margin-left: 70px;
+        height: 400px;
+        margin-top: 0px;
+
+    }
+    .about{
+        padding: 70px 30px 20px;
+        align-items: start;
+        flex-direction: column;
+    }
+    .about-text h2{
+        font-size: 50px;
+    }
+    .about-box img{
+        margin: 20px 0px;
+        left: 200px;
+        top: 0px;
+    }
+    .about-box div .first{
+        margin-top: 80px;
+    }
+    .about .arrow{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0px;
+    }
+    .arrow i{
+        transform: rotate(-90deg);
+    }
+    .brand{
+       flex-direction: column;
+    }
+    .brand div{
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    .contact{
+        padding: 50px 30px;
+    }
+    .contact .send{
+        font-size: 25px;
+        padding: 15px;
+        top: 60px;
+        right: 10px;
+    }
+    .contact-box{
+        height: 300px;
+    }
+    .contact-box h2{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+    .contact-box input{
+        width: 300px;
+        padding: 8px 50px;
+    }
+    .contact-box button{
+        font-size: 15px;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content:center ;
+        text-align: center;
+    }
+    .menu{
+        width: 200px;
+    }
+    .pd{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    
+    
+}
+@media (max-width: 431px) {
+    nav .logo{
+        font-size: 20px;
+    }
+    .logo i{
+        font-size: 20px;
+    }
+    .btn{
+        width: 120px;
+    }
+    #icon{
+        width: 20px;
+    }
+    nav button{
+        padding: 8px;
+        font-size: 12px;
+
+    }
+    .home-text h2{
+        font-size: 40px;
+    }
+    .home-text p{
+        font-size: 12px;
+    }
+    .click button{
+        font-size: 15px;
+    }
+    .play i{
+        font-size: 30px;
+    }
+    .play span{
+        font-size: 13px;
+    }
+    .category h2{
+        font-size: 30px;
+    }
+    .category-content{
+        padding: 30px ;
+    }
+    .selling-box h2{
+        font-size: 30px;
+    }
+    .card{
+        height: 400px;
+    }
+    .card-img{
+        height: 330px;
+    }
+    .booking-box{
+        padding: 80px 20px;
+    }
+    .booking-text{
+        text-align: center;
+    }
+    .booking-content{
+        flex-direction: column;
+    }
+    .booking-content div{
+        width: 400px;
+        padding: 20px;
+    }
+    .booking-content i{
+        margin-right: 0px;
+    }
+    
+    .booking-text h2{
+        font-size: 35px;
+
+    }
+    .booking-card{
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+    .about-text{
+        text-align: center;
+        width: 100%;
+    }
+    .about-text h2{
+        font-size: 30px;
+    }
+    .about-box img{
+        left: 150px;
+    }
+    .contact-box{
+        padding: 0px 15px;
+        height: 350px;
+    }
+    .contact-box input{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .contact-box button{
+        width: 100%;
+    }
+}
+@media (max-width:415px) {
+    .home-text h4{
+        font-size: 15px;
+    }
+    
+    .booking-content div{
+        width: 380px;
+        padding: 20px;
+    }
+    .booking-card{
+        margin-left: 10px;
+    }
+}
+@media (max-width:376px) {
+    nav{
+        height: 60px;
+        padding: 0px 20px;
+    }
+    nav .logo{
+        font-size: 18px;
+    }
+    .logo i{
+        font-size: 18px;
+    }
+    .btn button{
+        font-size: 13px;
+        padding: 5px 8px;
+    }
+    .home-text h4{
+        font-size: 13px;
+    }
+    .home-text h2{
+        font-size: 35px;
+    }
+    .home-text p{
+        font-size: 10px;
+    }
+    .click button{
+        font-size: 13px;
+    }
+    .play i{
+        font-size: 25px;
+    }
+    .play span{
+        font-size: 10px;
+    }
+    .play{
+        margin-top: 10px;
+    }
+    .card{
+        height: 350px;
+    }
+    .card-img{
+        height: 280px;
+    }
+    .booking-text h2{
+        font-size: 30px;
+    }
+    .booking-content div{
+        width: 350px;
+        padding: 20px 10px;
+    }
+    .booking-card{
+        width: 80%;
+        height: 300px;
+        margin-left: 35px;
+    }
+    .about-box img{
+        left: 130px;
+    }
+    .contact-box h2{
+        font-size: 15px;
+    }
+}
+
